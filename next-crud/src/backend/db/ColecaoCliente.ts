@@ -37,7 +37,7 @@ export default class ColecaoCliente implements ClienteInterface{
     async excluir(cliente: Cliente): Promise<void> {
         return this.colecao().doc(cliente.id).delete()
     }
-    async obterTodos(cliente: Cliente): Promise<Cliente[]> {
+    async obterTodos(): Promise<Cliente[]> {
         const query= await this.colecao().get()
         return query.docs.map(doc => doc.data()) ?? []
     }
