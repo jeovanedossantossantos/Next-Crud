@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
+
 import React, { useState, useEffect } from 'react'
 import Botao from '../components/Botao'
 import Formulario from '../components/Formulario'
@@ -8,7 +7,7 @@ import Tabela from '../components/Tabela'
 import Cliente from '../core/Cliente'
 import ClienteInterface from '../core/ClienteInterface'
 import ColecaoCliente from '../backend/db/ColecaoCliente'
-import styles from '../styles/Home.module.css'
+
 
 export default function Home() {
 

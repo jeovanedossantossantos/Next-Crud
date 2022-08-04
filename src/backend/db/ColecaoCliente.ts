@@ -15,7 +15,7 @@ export default class ColecaoCliente implements ClienteInterface{
         fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot, 
                         options: firebase.firestore.SnapshotOptions): Cliente{
                             const dados = snapshot.data(options)
-                            return new Cliente(dados.name, dados.idade, snapshot.id)
+                            return new Cliente(dados.nome, dados.idade, snapshot.id)
 
                         }
     }
@@ -39,6 +39,7 @@ export default class ColecaoCliente implements ClienteInterface{
     }
     async obterTodos(): Promise<Cliente[]> {
         const query= await this.colecao().get()
+        console.log(query.docs.map(doc => doc.data()) ?? [])
         return query.docs.map(doc => doc.data()) ?? []
     }
 
