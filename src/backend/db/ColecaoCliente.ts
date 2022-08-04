@@ -5,7 +5,7 @@ import firebase from "../config";
 
 export default class ColecaoCliente implements ClienteInterface{
     
-    #conversor ={
+    conversor ={
         toFirestore(cliente: Cliente){
             return{
                 nome: cliente.nome,
@@ -44,7 +44,7 @@ export default class ColecaoCliente implements ClienteInterface{
     }
 
     private colecao(){
-        return firebase.firestore().collection('clientes').withConverter(this.#conversor)
+        return firebase.firestore().collection('clientes').withConverter(this.conversor)
     }
     
 }
