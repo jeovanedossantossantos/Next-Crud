@@ -3,8 +3,8 @@
 Objetivo: crud utilizando o firebase para armazenar os dados.
 
 <img src="./img/00.png">
-<img src="./img/01.png">
-<img src="./img/02.png">
+<img src="./img/1.png">
+<img src="./img/2.png">
 
 Configuração:
 
