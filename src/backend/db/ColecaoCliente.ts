@@ -39,7 +39,6 @@ export default class ColecaoCliente implements ClienteInterface{
     }
     async obterTodos(): Promise<Cliente[]> {
         const query= await this.colecao().get()
-        console.log(query.docs.map(doc => doc.data()) ?? [])
         return query.docs.map(doc => doc.data()) ?? []
     }
 
